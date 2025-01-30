@@ -7,7 +7,6 @@ const users = require("./classes/users")
 const mysql =  require('mysql2/promise');  // Ensure proper import
 const winston = require('winston');
 const Users = require("./classes/users");
-require("dotenv").config()
 
 const pool = mysql.createPool({
             host: process.env.SQLHOST,

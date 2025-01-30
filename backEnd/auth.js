@@ -4,7 +4,6 @@ const argon = require("argon2")
 const auth = require("./classes/auth")
 const portal = require("./classes/portal")
 const winston = require('winston');
-require("dotenv").config()
 const mysql =  require('mysql2/promise');  // Ensure proper import
 
 const pool = mysql.createPool({

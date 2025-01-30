@@ -5,7 +5,6 @@ const jwt = require("jsonwebtoken")
 const mysql =  require('mysql2/promise');  // Ensure proper import
 const winston = require('winston');
 const portal = require("./classes/portal");
-require("dotenv").config()
 
 const pool = mysql.createPool({
             host: process.env.SQLHOST,
