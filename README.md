@@ -210,11 +210,103 @@ We are using three routes:
     * **Inputs**: ["**username**", "**password**"]
     * **Accessible By**: ["**ADMIN**", "**MANAGER**", "**STUDENT**, **TEACHER**", "**PARENT**"]
 
+# Example Requests
+Following are requests that can be made to the above endpoints.
+
+## **<span style="color: orange;">POST</span>**  Create Manager
+Following is the JSON object that will be send to the server to make a new manager. This will me made to *https://api.convenientedu.com/user/insert/manager*
+```
+    {
+    "username": "some_manager", 
+    "firstname": "Some", 
+    "lastname": "Manager", 
+    "password": "SomePassword", 
+    "country": "PK",
+    "AuthToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9. eyJ1c2VybmFtZSI6Ik11aGFtbWFkIiwidXNlcnR5cGUiOiJBRE1JTiIsInVpZCI6MSwiaWF0IjoxNzM4MzQ4MTI2LCJleHAiOjE3MzgzODQxMjZ9.j-DlH5QZvSDhbnKQVOLTka3dx7qg--S-t93y0nhbWq8"
+    }
+```
+
+## **<span style="color: orange;">POST</span>**  Create Admin
+Following is the JSON object that will be send to the server to make a new admin. This will me made to *https://api.convenientedu.com/user/insert/admin*
+```
+{
+    "username": "some_admin", 
+    "firstname": "Some", 
+    "lastname": "Admin", 
+    "password": "SomePassword", 
+    "country": "PK",
+    "AuthToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik11aGFtbWFkIiwidXNlcnR5cGUiOiJBRE1JTiIsInVpZCI6MSwiaWF0IjoxNzM4MTQ4OTM1LCJleHAiOjE3MzgxODQ5MzV9.XOPVy7cUdnEQJknNpcHkx8rHhFODUxFMhgkFTz0zmjA"
+}
+```
+
+## **<span style="color: orange;">POST</span>**  Create Teacher
+Following is the JSON object that will be send to the server to make a new admin. This will me made to *https://api.convenientedu.com/user/insert/teacher*
+```
+{
+    "username":"someusername", 
+    "firstname":"Some", 
+    "lastname":"Teacher", 
+    "password":"SomePassword", 
+    "country":"PK", 
+    "subject": ["CHEMISTRY"], 
+    "monday":["11:00:00", "12:00:00", "13:00:00", "14:00:00"], 
+    "tuesday":["11:00:00", "12:00:00", "13:00:00", "14:00:00"], 
+    "wednesday":["11:00:00", "12:00:00", "13:00:00", "14:00:00"], 
+    "thursday":["11:00:00", "12:00:00", "13:00:00", "14:00:00"], 
+    "friday":["11:00:00", "12:00:00", "13:00:00", "14:00:00"], 
+    "saturday":["11:00:00", "12:00:00", "13:00:00", "14:00:00"], 
+    "sunday":["11:00:00", "12:00:00", "13:00:00", "14:00:00"],
+    "AuthToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik11aGFtbWFkIiwidXNlcnR5cGUiOiJBRE1JTiIsInVpZCI6MSwiaWF0IjoxNzM4MzQ4MTI2LCJleHAiOjE3MzgzODQxMjZ9.j-DlH5QZvSDhbnKQVOLTka3dx7qg--S-t93y0nhbWq8"
+
+}
+```
+
+## **<span style="color: orange;">POST</span>**  Create Student
+Following is the JSON object that will be send to the server to make a new admin. This will me made to *https://api.convenientedu.com/user/insert/student/support
+*
+```
+{
+    "username": "some_other_student", 
+    "firstname": "Some", 
+    "lastname": "Other Student",  
+    "password":"NewPassword&*^420", 
+    "country":"PK", 
+    "parentID":5,
+    "AuthToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik11aGFtbWFkIiwidXNlcnR5cGUiOiJBRE1JTiIsInVpZCI6MSwiaWF0IjoxNzM4MTQ4OTM1LCJleHAiOjE3MzgxODQ5MzV9.XOPVy7cUdnEQJknNpcHkx8rHhFODUxFMhgkFTz0zmjA"
+
+}
+```
+> Parent ID is optional
+
+## **<span style="color: orange;">POST</span>** Create Parent
+Following is the JSON object that will be send to the server to make a new admin. This will me made to *https://api.convenientedu.com/user/insert/parent*
+```
+    {
+    "username": "some_parent", "
+    firstname": "Some", 
+    "lastname": "Parent", 
+    "password": "New_Password&*^420", 
+    "country": "PK",
+    "AuthToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik11aGFtbWFkIiwidXNlcnR5cGUiOiJBRE1JTiIsInVpZCI6MSwiaWF0IjoxNzM4MTQ4OTM1LCJleHAiOjE3MzgxODQ5MzV9.XOPVy7cUdnEQJknNpcHkx8rHhFODUxFMhgkFTz0zmjA"
+}
+```
+
+## **<span style="color: orange;">POST</span>** Login
+Following is the JSON object that will be send to the server to login. This will me made to *https://api.convenientedu.com/auth/login*
+```
+{
+    "username": "Admin",
+    "password": "Password"
+}
+```
+
+
+
 # Requirements and Plans
 Following are the plans for future versions and current known bugs.
 ## Version 1.1
 ### REQUIREMENTS FOR VERSION 1.1
-- Redis Server Implementation.
+- **Redis Server** Implementation.
 - Page to create new general student
 - Page to create new general classrooms
 - Back End Verification For Working Time When Inserting New Class
