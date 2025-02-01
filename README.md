@@ -375,3 +375,4 @@ Following are the plans for future versions and current known bugs.
 	- Support Students/Parents can only communicate with upcoming class teachers and with teachers within 3 past days
 	- General Students can chat with their classmates
 - Self Conference System
+- **Short Courses**: Make a system that can allow short courses student to join.
