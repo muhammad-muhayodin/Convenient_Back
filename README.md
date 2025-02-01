@@ -317,14 +317,18 @@ Following are the plans for future versions and current known bugs.
 - Automatic Link Allocation System
 - Password Reset Page
 - Add email to make sure users are unique
+- In The Class Adder Selector, add a section for past teachers.
 - Don't Show Inactive Classes
+- Don't Show Inactive Users.
 - Add phone (optional) to users
+- Prometheus, Loki and Grafana Server Setups
 ### Bug Fixed Required
+- Clear Buttons On
 - Redirect to home after adding child, on page add children/add/students
 
 ## Version 1.2
 ### REQUIREMENTS FOR VERSION 1.2
-- Students Can Change Time Within 4 Hours
+- Support Students Can Change Time Within 4 Hours
 - Parent Can Give Permission To Children For Adding New Classes
 - Score For Each Class
 	- Teacher Can Give Score For Each Student after each class
